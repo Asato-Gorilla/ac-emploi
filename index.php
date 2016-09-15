@@ -1,5 +1,6 @@
 <?php include'entete.php';?>
 		<div id="accueil-connexion">
+   <div class="wrapper">
     <div id="presentation">
         <h2>Acoustiqueemploi.fr</h2>
         <h3>Plateforme d'emploi <br />des métiers de l'acoustique</h3>
@@ -14,8 +15,9 @@
         <p>Connexion</p>
         <?php  traiter_identifiants($connexion,$parametres=array());?>
         </div>
-    <a href="">Pas encore inscrit ? Par ici !</a>
+    <a href="inscription.php">Pas encore inscrit ? Par ici !</a>
     </div>
+</div>
 </div>
 <?php include'pied_page.php';?>
 		

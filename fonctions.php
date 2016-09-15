@@ -1,7 +1,7 @@
 <?php
 function connexion_db(){
 	try{
-		$con=new PDO('mysql:host=db630061859.db.1and1.com;dbname=db630061859','dbo630061859','06@coustiquE');
+		$con=new PDO('mysql:host=localhost;dbname=ac-emploi','root','');
 	}catch(PDOException $e){
 		echo"Erreur :".$e->getMessage();
 		die();

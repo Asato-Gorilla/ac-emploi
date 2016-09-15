@@ -59,5 +59,7 @@ $connexion=connexion_db();
             </div>
         </header>
 			<div id='formulaire'>
+			    <div class="wrapper">
 				<?php  traiter_identifiants($connexion,$parametres=array());?>
+				</div>
 			</div>

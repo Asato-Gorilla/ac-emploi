@@ -1,28 +1,21 @@
-<?php 
-session_start();
-require_once('fonctions.php');
-$connexion=connexion_db();
-
-$tab = array(
-':pseudo' => $_POST['pseudo'],
-':mail' => $_POST['mail'],
-':password' => $_POST['password']
-);
-
-$sql = "INSERT INTO `candidat` (`pseudo`, `mail_candidat`, `pass_candidat`) 
-VALUES (:pseudo, :mail, :password)" ;
-
-$req = $connexion->prepare($sql);
-$result = $req->execute($tab);
-
-if (!$result) {
-// ça t'affiche juste un code. C'est suffisant en prod pour que l'utilisateur te fasse un retour
-//echo "Une erreur est survenue : " . $req->errorCode();
-
-// Mais en dev, pour comprendre, tu peux faire ça :
-print_r($req->errorInfo());
-}else{
-    header('Location: profil.php');   
-}
-
-?>
+<?php include'entete.php';?>
+<div id="inscription">
+    <div class="wrapper">
+        <form action='script-inscription.php' method='post'>
+        <input type='text' name='nom' placeholder='Nom'/>
+        <input type='text' name='prenom' placeholder='Prenom'/>
+        <input type='text' name='email' placeholder='E-mail'/>
+        <input type='text' name='verif-email' placeholder='Vérification E-mail'/>
+        
+        <input type='password' name='mot_passe' placeholder='Mot de passe'/>
+        <input type='password' name='verif-mot_passe' placeholder='Vérification Mot de passe'/>
+        
+        
+        
+        
+        <input type='submit' value ='Ok'/>
+        </form>
+    </div>   
+</div>
+<?php include'pied_page.php';?>
+		
