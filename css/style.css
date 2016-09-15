@@ -184,6 +184,29 @@ ul#reseaux li#facebook a:hover{
     border-radius:30px;
     text-align:center;
 }
+
+
+
+/********************************** Page Inscription *******************/
+
+#inscription form{
+    width:50%;
+    float:left;
+    margin:100px 0;
+    background:#eee;
+    border-radius:30px;
+}
+#inscription form input{
+    float:left;
+    width:90%;
+    margin:15px 5%;
+}
+
+
+
+
+
+/**************************************** Footer ********************************/
 footer{
     background:#bd2b39;
     height:70px;

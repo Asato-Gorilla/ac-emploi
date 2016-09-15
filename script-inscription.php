@@ -6,11 +6,11 @@ $connexion=connexion_db();
 $tab = array(
 ':nom' => $_POST['nom'],
 ':prenom' => $_POST['prenom'],
-':mail' => $_POST['mail'],
-':password' => $_POST['password']
+':mail' => $_POST['email'],
+':password' => $_POST['mot_passe']
 );
 
-$sql = "INSERT INTO `candidat` ('nom_candidat', 'prenom_candaidat','mail_candidat', 'pass_candidat') 
+$sql = "INSERT INTO `candidat` (`nom_candidat`, `prenom_candidat`, `mail_candidat`, `pass_candidat`) 
 VALUES (:nom, :prenom, :mail, :password)" ;
 
 $req = $connexion->prepare($sql);
