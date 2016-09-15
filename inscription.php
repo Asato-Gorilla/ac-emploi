@@ -2,6 +2,7 @@
 <div id="inscription">
     <div class="wrapper">
         <form action='script-inscription.php' method='post'>
+        <input type='text' name='pseudo' placeholder='Identifiant'/>
         <input type='text' name='nom' placeholder='Nom'/>
         <input type='text' name='prenom' placeholder='Prenom'/>
         <input type='text' name='email' placeholder='E-mail'/>

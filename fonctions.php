@@ -9,7 +9,7 @@ function connexion_db(){
 	return $con;
 }
 function verif_identifiants($connexion,$parametres=array()){
-	$req=$connexion->prepare("Select * FROM candidat WHERE pseudo=? AND pass_candidat=?");
+	$req=$connexion->prepare("Select * FROM candidat WHERE pseudo_candidat=? AND pass_candidat=?");
 	$req->execute($parametres);
 	$res=$req->fetch();
 	//var_dump($res);
@@ -17,7 +17,7 @@ function verif_identifiants($connexion,$parametres=array()){
 }
 function traiter_identifiants($connexion,$parametres=array()){
 	if(isset($_SESSION['pseudo'])){
-		echo"Bienvenue <strong>".$_SESSION['fonction']."</strong> <a href='deconnexion.php'> Se déconnecter</a>";
+		echo"Bienvenue <strong>".$_SESSION['pseudo']."</strong> <a href='deconnexion.php'> Se déconnecter</a>";
 	}else {
 		if(isset($_POST['pseudo'],$_POST['mot_passe'])){
 			extract($_POST);
@@ -25,8 +25,8 @@ function traiter_identifiants($connexion,$parametres=array()){
 			$res=verif_identifiants($connexion,$parametres);
 			if(count($res)>1){
 				$_SESSION['pseudo']=$pseudo;
-				$_SESSION['fonction']=$res['fonction'];
-				echo"Bienvenue <strong>".$_SESSION['pseudo']."</strong> <a href='deconnexion.php'> Se déconnecter</a>";
+				//$_SESSION['fonction']=$res['fonction'];
+				echo"Bienvenue <a href='profil.php'><strong>".$_SESSION['pseudo']."</strong></a> <a href='deconnexion.php'> Se déconnecter</a>";
 			}else  {
 				echo"<form action='' method='post'>
 				<span>Identifiants saisis invalides !!</span>

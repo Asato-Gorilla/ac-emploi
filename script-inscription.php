@@ -4,14 +4,15 @@ require_once('fonctions.php');
 $connexion=connexion_db();
 
 $tab = array(
+':pseudo' => $_POST['pseudo'],
 ':nom' => $_POST['nom'],
 ':prenom' => $_POST['prenom'],
 ':mail' => $_POST['email'],
 ':password' => $_POST['mot_passe']
 );
 
-$sql = "INSERT INTO `candidat` (`nom_candidat`, `prenom_candidat`, `mail_candidat`, `pass_candidat`) 
-VALUES (:nom, :prenom, :mail, :password)" ;
+$sql = "INSERT INTO `candidat` (`pseudo_candidat`, `nom_candidat`, `prenom_candidat`, `mail_candidat`, `pass_candidat`) 
+VALUES (:pseudo, :nom, :prenom, :mail, :password)" ;
 
 $req = $connexion->prepare($sql);
 $result = $req->execute($tab);
