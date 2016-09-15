@@ -1,0 +1,223 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***********************************************************************************************************************************************/
+/***********************************************************************************************************************************************/
+/***********************************************************************************************************************************************/
+body{
+    font-size:14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper{
+        width:100%;
+        max-width:1200px;
+        margin:0 auto;
+    }
+header, footer, section{
+    width:100%;
+    float:left;
+}
+
+header{
+    background:#000;
+    height:70px;
+    color:#fff;
+}
+header h1{
+    display:block;
+    margin-top:17px;
+    height:35px;
+    width:344px;
+    float:left;
+}
+header h1 a{
+    display:block;
+    background:url(../img/logo-header.png) no-repeat;
+    text-indent:-9999px;
+    height:100%;
+}
+
+nav{
+    float:right;
+    height:27px;
+    line-height:27px;
+    margin-top:21px;
+    width:60%;
+}
+nav ul{
+    float:left;
+}
+nav ul li{
+    float:left;
+    margin-right:27px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+li#navcontact a{
+    margin-right:27px;
+}
+li#navfaq a, li#navcgu a{
+    opacity:0.5;
+}
+
+
+ul#reseaux li{
+    margin-right:5px;
+}
+
+ul#reseaux li a{
+    display:block;
+    text-indent:-9999px;
+    width:28px;
+    height:27px;
+    background:url(../img/sprite-reseaux-sociaux.png) no-repeat;
+    background-position:0 -27px;
+}
+ul#reseaux li#linkedin a{
+    background-position:-28px -27px;
+}
+ul#reseaux li#twitter a{
+    background-position:-56px -27px;
+}
+ul#reseaux li#facebook a{
+    background-position:-84px -27px;
+}
+ul#reseaux li#viadeo a:hover{
+    background-position:0 -54px;
+}
+ul#reseaux li#linkedin a:hover{
+    background-position:-28px -54px;
+}
+ul#reseaux li#twitter a:hover{
+    background-position:-56px -54px;
+}
+ul#reseaux li#facebook a:hover{
+    background-position:-84px -54px;
+}
+
+footer{
+    background:#bd2b39;
+    height:70px;
+    color:#fff;
+    padding-bottom:25px;
+}
+#footerleft{
+    float:left;
+    width:35%;
+}
+footer h2{
+    display:block;
+    margin-top:17px;
+    height:35px;
+    width:344px;
+    float:left;
+}
+footer h2 a{
+    display:block;
+    background:url(../img/logo-footer.png) no-repeat;
+    text-indent:-9999px;
+    height:100%;
+}
+footer p{
+    float:left;
+    opacity:0.5;
+    font-size:12px;
+    margin-top:5px;
+}
+footer p a{
+    color:#fff;
+    text-decoration:none;
+}
+footer p a:hover{
+    color:#000;
+    text-decoration:none;
+}
+footer ul#reseaux li#viadeo a:hover{
+    background-position:0 0;
+}
+footer ul#reseaux li#linkedin a:hover{
+    background-position:-28px 0;
+}
+footer ul#reseaux li#twitter a:hover{
+    background-position:-56px 0;
+}
+footer ul#reseaux li#facebook a:hover{
+    background-position:-84px 0;
+}
+
+
+
+
+/***************************************************     Laptop     **********************************************************/
+
+@media screen and (max-width: 1200px) {
+    .wrapper{
+        width:100%;
+        max-width:960px;
+    }
+}
+
+/***************************************************     Tablette     **********************************************************/
+@media screen and (max-width: 980px) {
+    .wrapper{
+        width:100%;
+        max-width:640px;
+    }
+}
+
+/***************************************************     Telephone     **********************************************************/
+@media screen and (max-width: 640px) {
+    .wrapper{
+        width:100%;
+        max-width:320px;
+    }
+}
